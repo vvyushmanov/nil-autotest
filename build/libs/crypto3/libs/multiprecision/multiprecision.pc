@@ -1,0 +1,10 @@
+
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${exec_prefix}/include
+Name: multiprecision
+Description: No description
+Version: 1.76.0
+
+Cflags:  -I/opt/boost_1_76_0/include -I${includedir}

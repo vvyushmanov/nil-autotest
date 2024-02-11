@@ -1,0 +1,12 @@
+
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${exec_prefix}/include
+Name: codec
+Description: No description
+Version: 0.1.0
+
+Cflags:  -I/opt/boost_1_76_0/include -I${includedir} -DCRYPTO3_CODEC_BASE58
+Libs: -L${libdir}  crypto3::multiprecision
+Requires: 

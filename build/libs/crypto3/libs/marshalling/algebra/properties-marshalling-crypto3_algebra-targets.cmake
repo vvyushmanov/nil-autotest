@@ -1,0 +1,2 @@
+
+set_target_properties(marshalling::crypto3_algebra PROPERTIES INTERFACE_PKG_CONFIG_NAME crypto3_algebra)

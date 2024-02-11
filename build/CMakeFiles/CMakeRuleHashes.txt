@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+f1f8192d2a2588d189150e12bae2572d src/CMakeFiles/template
+5ef4c9945a31280fde6f40a702236455 src/CMakeFiles/template_no_stdlib
+603b1d75c9938327ba73b6e489199c58 src/CMakeFiles/template_no_stdlib_main.cpp_ll

@@ -1,0 +1,38 @@
+name: tutorial_check
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+
+concurrency:
+  group: ${{
+    ( github.ref == 'refs/heads/master' &&
+    format('{0}/{1}', github.run_id, github.run_attempt) )
+    ||
+    format('{0}/{1}', github.workflow, github.ref) }}
+  cancel-in-progress: true
+
+env:
+  TOOLCHAIN_VERSION: 0.1.8
+
+jobs:
+  test-zkllvm-workflow:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: Compile a circuit in IR format
+        run: scripts/run.sh --verbose --docker compile
+
+      - name: Build a binary circuit and assignment table
+        run: scripts/run.sh --verbose --docker run_assigner
+
+      - name: Calculate a proof
+        run: scripts/run.sh --verbose --docker prove
+
+      - name: Build circuit parameters for EVM verifier endpoint
+        run: scripts/run.sh --verbose --docker build_circuit_params

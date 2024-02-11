@@ -1,0 +1,12 @@
+
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${exec_prefix}/include
+Name: containers
+Description: No description
+Version: 0.1.0
+
+Cflags:  -I/opt/boost_1_76_0/include -I${includedir}
+Libs: -L${libdir}  
+Requires: algebra,hash

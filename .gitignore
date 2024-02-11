@@ -1,0 +1,50 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+.idea/
+
+cmake-build-debug/
+# configuration directory with Proof Market credentials
+.config
+
+#hardhat files
+deploy/artifacts
+deploy/cache
+deploy/node_modules
+deploy/typechain-types
+
+#python
+__pycache__/
+.pytest_cache
+
+_test_assigment.md
