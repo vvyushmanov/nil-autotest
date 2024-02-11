@@ -89,26 +89,25 @@ def proof_generator_verify():
 
 # TESTS
 def test_assert_assigner_heap(assigner_max_heap): 
-    assert assigner_max_heap < 483000000, "Max heap usage is below 483000000"
+    assert assigner_max_heap < 483000000, "Max heap usage is above 483000000!"
 
 def test_assert_assigner_time(assigner_time):
-    assert assigner_time < 220
+    assert assigner_time < 220, "Execution time is above 220ms!"
 
 def test_assert_proof_generator_heap(proof_generator_max_heap): 
-    assert proof_generator_max_heap < 1180000, "Max heap usage is below 1180000"
+    assert proof_generator_max_heap < 1180000, "Max heap usage is above 1180000!"
 
 def test_assert_proof_generator_time(proof_generator_time):
-    assert proof_generator_time < 260
+    assert proof_generator_time < 260, "Execution time is above 260ms!"
 
 def test_assert_proof_generator_verified(proof_generator_verify):
-    assert proof_generator_verify == 0, "There was no \"proof verified\" line"
+    assert proof_generator_verify == 0, "There was no \"proof verified\" line!"
 
 # Code to execute before/after all tests
 @pytest.fixture(scope="session", autouse=True)
 def cleanup():
     # Execute before tests
-    if False:
-        pytest.fail("Environment is not set up!")
+
     yield
     # Execute after all tests
     for file in glob.glob("massif.out.*"):
