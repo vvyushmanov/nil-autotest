@@ -4,10 +4,10 @@ Code is available in the [autotest.py](./autotest.py) Python script.
 
 ## Prerequisites
 
-Install `pytest`:
+Install requirements:
 
 ```shell
-pip install pytest
+pip install -r requirements.txt
 ```
 
 ## Running the tests
