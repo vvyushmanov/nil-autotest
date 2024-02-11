@@ -46,5 +46,3 @@ deploy/typechain-types
 #python
 __pycache__/
 .pytest_cache
-
-_test_assigment.md
