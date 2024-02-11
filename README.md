@@ -1,5 +1,7 @@
 # Autotests for =Nil zkLLVM toolchain
 
+Code is available in the [autotest.py](./autotest.py) Python script.
+
 ## Prerequisites
 
 Install `pytest`:
